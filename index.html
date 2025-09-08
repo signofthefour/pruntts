@@ -22,13 +22,13 @@
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+    <nav class="navbar is-success" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
-            <a class="navbar-item" href="https://mm.kaist.ac.kr/">
+            <a class="navbar-item has-radius" href="https://mm.kaist.ac.kr/" style="border-radius: 8px;">
                 <span class="icon">
                     <i class="fas fa-home"></i>
                 </span>
-                <span>KAIST</span>
+                <span>Multimodal AI Lab - KAIST</span>
             </a>
             <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
                 <span aria-hidden="true"></span>
@@ -46,6 +46,12 @@
                             </span>
                             <span>arXiv</span>
                         </a>
+                        <a class="button is-dark" href="#">
+                            <span class="icon">
+                                <i class="fab fa-github"></i>
+                            </span>
+                            <span>Code</span>
+                        </a>
                         <a class="button is-info" href="https://mmai.io/pubs/">
                             <span class="icon">
                                 <i class="fas fa-research"></i>
@@ -59,7 +65,7 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero is-primary is-medium">
+    <section class="hero is-white is-medium">
         <div class="hero-body">
             <div class="container has-text-centered">
                 <h1 class="title is-1 publication-title">
@@ -67,34 +73,53 @@
                 </h1>
                 <div class="is-size-5 publication-authors">
                     <span class="author-block">
-                        <a href="https://signofthefour.github.io/" class="has-text-white">Tan Dat Nguyen</a><sup>*</sup>,
+                        <a href="https://signofthefour.github.io/" class="has-text-dark">Tan Dat Nguyen</a>,
                     </span>
                     <span class="author-block">
-                        <a href="https://sites.google.com/view/jhoonkim/" class="has-text-white">Ji-Hoon Kim</a><sup>*</sup>,
+                        <a href="https://sites.google.com/view/jhoonkim/" class="has-text-dark">Ji-Hoon Kim</a>,
                     </span>
                     <span class="author-block">
-                        <a href="#" class="has-text-white">Jaehun Kim</a>,
+                        <a href="https://smokedindia.notion.site/Jaehun-Kim-5006f1fc98004817885325241723f1e3?pvs=74" class="has-text-dark">Jaehun Kim</a>,
                     </span>
                     <span class="author-block">
-                        <a href="https://mmai.io/joon/" class="has-text-white">Joon Son Chung</a><sup>†</sup>
+                        <a href="https://mmai.io/joon/" class="has-text-dark">Joon Son Chung</a><sup>†</sup>
                     </span>
                 </div>
-                <div class="is-size-6 publication-authors has-text-white">
+                <div class="is-size-6 publication-authors has-text-dark">
                     <span class="author-block">Korea Advanced Institute of Science and Technology (KAIST), South Korea</span>
                 </div>
-                <div class="is-size-7 has-text-white mt-2">
-                    <span>*Authors contribute equally to this work, †Corresponding author</span>
+                <div class="is-size-7 has-text-dark mt-2">
+                    <span>†Corresponding author</span>
                 </div>
-                <div class="column has-text-centered mt-4">
-                    <div class="publication-links">
-                        <span class="link-block">
-                            <a href="#" class="external-link button is-danger is-large">
-                                <span class="icon">
-                                    <i class="ai ai-arxiv"></i>
-                                </span>
-                                <span>arXiv</span>
-                            </a>
-                        </span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Results Section -->
+    <section class="section has-background-light">
+        <div class="container">
+            <h2 class="title is-3 has-text-centered">Key Results</h2>
+            <div class="columns is-centered">
+                <div class="column is-8">
+                    <div class="columns is-multiline">
+                        <div class="column is-one-third">
+                            <div class="box has-text-centered">
+                                <p class="title is-1 has-text-success">50%</p>
+                                <p class="subtitle is-5">Model Depth Reduction</p>
+                            </div>
+                        </div>
+                        <div class="column is-one-third">
+                            <div class="box has-text-centered">
+                                <p class="title is-1 has-text-info">20%</p>
+                                <p class="subtitle is-5">VRAM Usage Reduction</p>
+                            </div>
+                        </div>
+                        <div class="column is-one-third">
+                            <div class="box has-text-centered">
+                                <p class="title is-1 has-text-warning">&lt;5%</p>
+                                <p class="subtitle is-5">Training Data Required</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -156,7 +181,7 @@
             <div class="box">
                 <div class="field is-grouped is-grouped-centered mb-4">
                     <div class="control">
-                        <button class="button is-info" id="play-all-btn">
+                        <button class="button is-success" id="play-all-btn">
                             <span class="icon"><i class="fas fa-play"></i></span>
                             <span>Play All</span>
                         </button>
@@ -179,11 +204,11 @@
                 <div class="table-container">
                     <table class="table is-fullwidth is-striped is-hoverable">
                         <thead>
-                            <tr class="has-background-primary has-text-white">
+                            <tr class="has-background-success has-text-white">
                                 <th class="has-text-white">Sample</th>
-                                <th class="has-text-white">Ground Truth</th>
+                                <th class="has-text-white">Ground Truth (Seed TTS)/ Reference Voice (LibriTTS)</th>
                                 <th class="has-text-white">CosyVoice 2</th>
-                                <th class="has-text-white">CosyVoice 2 Lite</th>
+                                <th class="has-text-white">CosyVoice 2 Lite (Ours)</th>
                                 <th class="has-text-white">LLaSA</th>
                                 <th class="has-text-white">LLaSA Lite (Ours)</th>
                             </tr>
@@ -197,41 +222,6 @@
         </div>
     </section>
 
-    <!-- Key Results Section -->
-    <section class="section has-background-light">
-        <div class="container">
-            <h2 class="title is-3 has-text-centered">Key Results</h2>
-            <div class="columns is-centered">
-                <div class="column is-8">
-                    <div class="columns is-multiline">
-                        <div class="column is-one-third">
-                            <div class="box has-text-centered">
-                                <p class="title is-1 has-text-success">50%</p>
-                                <p class="subtitle is-5">Model Depth Reduction</p>
-                            </div>
-                        </div>
-                        <div class="column is-one-third">
-                            <div class="box has-text-centered">
-                                <p class="title is-1 has-text-info">20%</p>
-                                <p class="subtitle is-5">VRAM Usage Reduction</p>
-                            </div>
-                        </div>
-                        <div class="column is-one-third">
-                            <div class="box has-text-centered">
-                                <p class="title is-1 has-text-warning">&lt;5%</p>
-                                <p class="subtitle is-5">Training Data Required</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-                </table>
-            </div>
-        </div>
-    </section>
-
     <!-- BibTeX Section -->
     <section class="section">
         <div class="container">
@@ -241,16 +231,16 @@
                     <div class="field">
                         <div class="control">
                             <textarea class="textarea is-family-code" rows="8" readonly>
-@article{nguyen2024pruntts,
+@article{nguyen2026pruntts,
   title={Prun-TTS: Let Speak with Fewer but Essential Layers},
   author={Nguyen, Tan Dat and Kim, Ji-Hoon and Kim, Jaehun and Chung, Joon Son},
   journal={arXiv preprint arXiv:XXXX.XXXXX},
-  year={2024}
+  year={2026}
 }
                             </textarea>
                         </div>
                         <div class="control mt-2">
-                            <button class="button is-info" id="copy-bibtex">
+                            <button class="button is-success" id="copy-bibtex">
                                 <span class="icon"><i class="fas fa-copy"></i></span>
                                 <span>Copy BibTeX</span>
                             </button>
@@ -426,13 +416,13 @@
             const button = this;
             const originalText = button.innerHTML;
             button.innerHTML = '<span class="icon"><i class="fas fa-check"></i></span><span>Copied!</span>';
-            button.classList.remove('is-info');
-            button.classList.add('is-success');
+            button.classList.remove('is-success');
+            button.classList.add('is-info');
             
             setTimeout(() => {
                 button.innerHTML = originalText;
-                button.classList.remove('is-success');
-                button.classList.add('is-info');
+                button.classList.remove('is-info');
+                button.classList.add('is-success');
             }, 2000);
         });
 
