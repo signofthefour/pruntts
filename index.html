@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Demo page for LLaSA and comparisons with audio samples from multiple models.">
+    <meta name="keywords" content="LLaSA, CosyVoice, Audio Processing, Speech Synthesis, Text-to-Speech">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Efficient LLM-based Text-to-Speech: Compression and Distillation Framework</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+</head>
+<body class="bg-white text-black font-sans antialiased">
+    <nav class="navbar bg-gray-100 py-4" role="navigation" aria-label="main navigation">
+        <div class="container max-w-6xl mx-auto px-4">
+            <div class="flex justify-center items-center">
+                <a href="https://mm.kaist.ac.kr/" class="mr-4">
+                    <svg class="h-6 w-6 text-gray-600" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="home" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M280.37 148.26L96 300.11V464a16 16 0 0 0 16 16l112.06-.29a16 16 0 0 0 15.92-16V368a16 16 0 0 1 16-16h64a16 16 0 0 1 16 16v95.64a16 16 0 0 0 16 16.05L464 480a16 16 0 0 0 16-16V300L295.67 148.26a12.19 12.19 0 0 0-15.3 0zM571.6 251.47L488 182.56V44.05a12 12 0 0 0-12-12h-56a12 12 0 0 0-12 12v72.61L318.47 43a48 48 0 0 0-61 0L4.34 251.47a12 12 0 0 0-1.6 16.9l25.5 31A12 12 0 0 0 45.15 301l235.22-193.74a12.19 12.19 0 0 1 15.3 0L530.9 301a12 12 0 0 0 16.9-1.6l25.5-31a12 12 0 0 0-1.7-16.93z"></path></svg>
+                </a>
+                <a class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600" href="https://mmai.io/pubs/">Show more research</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero py-8">
+        <div class="container max-w-6xl mx-auto px-4">
+            <div class="text-center">
+                <h1 class="text-4xl font-bold mb-4">Prun-TTS: Let Speak with Fewer but Essential Layers</h1>
+                <div class="text-xl mb-4">
+                    <span class="author-block">
+                        <a href="https://signofthefour.github.io/" class="underline">Tan Dat Nguyen</a>,
+                    </span>
+                    <span class="author-block">
+                        <a href="https://sites.google.com/view/jhoonkim/" class="underline">Ji-Hoon Kim</a>,
+                    </span>
+                    <span class="author-block">
+                        <a href="#" class="underline">Jaehun Kim</a>,
+                    </span>
+                    <span class="author-block">
+                        <a href="https://mmai.io/joon/" class="underline">Joon Son Chung</a><sup>+</sup>
+                    </span>
+                </div>
+                <div class="text-lg mb-4">
+                    <span class="author-block">Korea Advanced Institute of Science and Technology (KAIST), South Korea</span>
+                </div>
+                <div class="text-sm mb-4">
+                    <span class="author-block">*Authors contribute equally to this work, <sup>+</sup>Corresponding author</span>
+                </div>
+                <div class="flex justify-center space-x-4">
+                    <a href="#" class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 flex items-center">
+                        <span class="mr-2">
+                            <svg class="h-5 w-5" aria-hidden="true" focusable="false" data-prefix="ai" data-icon="arxiv" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M48 32C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48H48zm47.6 97.1c23.6 0 42.7 19.2 42.7 42.8 0 23.6-19.2 42.7-42.7 42.7-23.6 0-42.8-19.2-42.8-42.7 0-23.6 19.2-42.8 42.8-42.8zm0 141.7c23.6 0 42.7 19.2 42.7 42.7s-19.2 42.7-42.7 42.7c-23.6 0-42.8-19.2-42.8-42.7 0-23.6 19.2-42.7 42.8-42.7zM224 272c0-23.6 19.2-42.7 42.7-42.7s42.7 19.2 42.7 42.7-19.2 42.7-42.7 42.7S224 295.6 224 272zm0-142.9c0-23.6 19.2-42.8 42.7-42.8s42.7 19.2 42.7 42.8-19.2 42.7-42.7 42.7S224 152.5 224 129.1zm112.1 48.2c-23.6 0-42.8 19.2-42.8 42.7s19.2 42.7 42.8 42.7 42.7-19.2 42.7-42.7-19.2-42.7-42.7-42.7zm0 141.7c-23.6 0-42.8 19.2-42.8 42.7s19.2 42.7 42.8 42.7 42.7-19.2 42.7-42.7-19.2-42.7-42.7-42.7z"></path></svg>
+                        </span>
+                        <span>arXiv</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-8">
+        <div class="container max-w-6xl mx-auto px-4">
+            <div class="grid grid-cols-2 gap-4 mb-8">
+                <img src="images/1.png" alt="Image 1" class="w-full h-auto rounded shadow">
+                <img src="images/2.png" alt="Image 2" class="w-full h-auto rounded shadow">
+                <img src="images/3.png" alt="Image 3" class="col-span-2 w-full h-auto rounded shadow">
+            </div>
+        </div>
+    </section>
+
+    <section class="py-8">
+        <div class="container max-w-6xl mx-auto px-4">
+            <h2 class="text-2xl font-bold mb-4">Abstract</h2>
+            <div class="text-lg leading-relaxed mb-4">
+                <p>
+                    The goal of this paper is to develop a compression and distillation framework for efficient Large Language Model (LLM)-based Text-to-Speech (LLM-TTS) systems. Recent advances such as CosyVoice and LLaSA have demonstrated strong improvements in controllability, prosody modeling, and cross-speaker generalization. However, their large parameter counts, high memory consumption, and slow inference limit practical deployment. Our framework integrates a \emph{pruning} step to identify and remove redundant layers with a \emph{distillation} process that transfers knowledge from the teacher model, thereby preserving semantic fidelity. Experiments on zero-shot synthesis benchmarks shows that the proposed framework achieves near-parity with LLaSA while reducing LLM model depth by $50\%$ and VRAM usage by $20\%$, requiring less than $5\%$ of the original training data. These results demonstrate that compact LLM-TTS models can retain high fidelity while enabling practical, resource-efficient speech generation.
+            </div>
+        </div>
+    </section>
+
+    <section class="py-8">
+        <div class="container max-w-6xl mx-auto px-4">
+            <h2 class="text-2xl font-bold mb-4">Audio Demos</h2>
+            <p class="text-1xl font-bold mb-4">(Note that these audios are directly shown for demo. But, these audios are normalized for fair evaluation in MOS survey.)</p>
+            <div class="content">
+                <table class="w-full table-auto border-collapse">
+                    <thead>
+                        <tr class="bg-gray-200">
+                            <!-- <th class="p-2 text-left">Sample</th> -->
+                            <!-- <th class="p-2 text-left">Groundtruth</th> -->
+                            <th class="p-2 text-left">CosyVoice 2</th>
+                            <th class="p-2 text-left">CosyVoice 2 Lite</th>
+                            <th class="p-2 text-left">LLaSA</th>
+                            <th class="p-2 text-left">LLaSA Lite</th>
+                        </tr>
+                    </thead>
+                    <tbody id="audio-table-body">
+                        <!-- Audio rows will be populated here via JS -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-8">
+        <div class="container max-w-6xl mx-auto px-4">
+            <h2 class="text-2xl font-bold mb-4">BibTeX</h2>
+            <pre class="bg-gray-100 p-4 rounded overflow-auto">
+BibTeX citation goes here.
+            </pre>
+        </div>
+    </section>
+
+    <footer class="footer bg-gray-100 py-8">
+        <div class="container max-w-6xl mx-auto px-4 text-center">
+            <p>
+                This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" class="text-blue-500">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        fetch('./static/audio_paths.json')
+            .then(response => response.json())
+            .then(data => {
+                const tableBody = document.getElementById('audio-table-body');
+                for (const sample in data) {
+                    const row = document.createElement('tr');
+                    row.classList.add('border-t');
+
+                    // Sample name
+                    // const sampleCell = document.createElement('td');
+                    // sampleCell.classList.add('p-2');
+                    // sampleCell.textContent = sample;
+                    // row.appendChild(sampleCell);
+
+                    // Groundtruth
+                    // const gtCell = document.createElement('td');
+                    // gtCell.classList.add('p-2');
+                    // if (data[sample].gt) {
+                    //    gtCell.innerHTML = `<audio controls class="w-full" style="width:230px;" preload="auto"><source src="${data[sample].gt}" type="audio/wav"></audio>`;
+                    // }
+                    // row.appendChild(gtCell);
+
+                    // CosyVoice 2 (cosyvoice_heal)
+                    const cosyHealCell = document.createElement('td');
+                    cosyHealCell.classList.add('p-2');
+                    if (data[sample].cosyvoice_heal) {
+                        cosyHealCell.innerHTML = `<audio controls class="w-full" style="width:230px;" preload="auto"><source src="${data[sample].cosyvoice_heal}" type="audio/wav"></audio>`;
+                    }
+                    row.appendChild(cosyHealCell);
+
+                    // CosyVoice 2 Lite (cosyvoice_ref)
+                    const cosyRefCell = document.createElement('td');
+                    cosyRefCell.classList.add('p-2');
+                    if (data[sample].cosyvoice_ref) {
+                        cosyRefCell.innerHTML = `<audio controls class="w-full" style="width:230px;" preload="auto"><source src="${data[sample].cosyvoice_ref}" type="audio/wav"></audio>`;
+                    }
+                    row.appendChild(cosyRefCell);
+
+                    // LLaSA (llasa_heal)
+                    const llasaHealCell = document.createElement('td');
+                    llasaHealCell.classList.add('p-2');
+                    if (data[sample].llasa_heal) {
+                        llasaHealCell.innerHTML = `<audio controls class="w-full" style="width:230px;" preload="auto"><source src="${data[sample].llasa_heal}" type="audio/wav"></audio>`;
+                    }
+                    row.appendChild(llasaHealCell);
+
+                    // LLaSA Lite (llasa_ref)
+                    const llasaRefCell = document.createElement('td');
+                    llasaRefCell.classList.add('p-2');
+                    if (data[sample].llasa_ref) {
+                        llasaRefCell.innerHTML = `<audio controls class="w-full" style="width:230px;" preload="auto"><source src="${data[sample].llasa_ref}" type="audio/wav"></audio>`;
+                    }
+                    row.appendChild(llasaRefCell);
+
+                    tableBody.appendChild(row);
+                }
+            })
+            .catch(error => console.error('Error loading audio paths:', error));
+    </script>
+</body>
+</html>

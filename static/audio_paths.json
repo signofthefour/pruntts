@@ -1,0 +1,139 @@
+{
+    "260_123288_000046_000000": {
+        "cosyvoice_heal": "./audio/cosyvoice_heal/260_123288_000046_000000.wav",
+        "cosyvoice_ref": "./audio/cosyvoice_ref/260_123288_000046_000000.wav",
+        "gt": "./audio/gt/260_123288_000046_000000.wav",
+        "llasa_heal": "./audio/llasa_heal/260_123288_000046_000000.wav",
+        "llasa_ref": "./audio/llasa_ref/260_123288_000046_000000.wav",
+        "vocoder": "./audio/vocoder/260_123288_000046_000000.wav"
+    },
+    "common_voice_en_21620052-common_voice_en_21620053": {
+        "cosyvoice_heal": "./audio/cosyvoice_heal/common_voice_en_21620052-common_voice_en_21620053.wav",
+        "cosyvoice_ref": "./audio/cosyvoice_ref/common_voice_en_21620052-common_voice_en_21620053.wav",
+        "gt": "./audio/gt/common_voice_en_21620052-common_voice_en_21620053.wav",
+        "llasa_heal": "./audio/llasa_heal/common_voice_en_21620052-common_voice_en_21620053.wav",
+        "llasa_ref": "./audio/llasa_ref/common_voice_en_21620052-common_voice_en_21620053.wav",
+        "vocoder": "./audio/vocoder/common_voice_en_21620052-common_voice_en_21620053.wav",
+        "codec": "./audio/codec/common_voice_en_21620052-common_voice_en_21620053.wav"
+    },
+    "common_voice_en_23809069-common_voice_en_23809074": {
+        "cosyvoice_heal": "./audio/cosyvoice_heal/common_voice_en_23809069-common_voice_en_23809074.wav",
+        "cosyvoice_ref": "./audio/cosyvoice_ref/common_voice_en_23809069-common_voice_en_23809074.wav",
+        "gt": "./audio/gt/common_voice_en_23809069-common_voice_en_23809074.wav",
+        "llasa_heal": "./audio/llasa_heal/common_voice_en_23809069-common_voice_en_23809074.wav",
+        "llasa_ref": "./audio/llasa_ref/common_voice_en_23809069-common_voice_en_23809074.wav",
+        "vocoder": "./audio/vocoder/common_voice_en_23809069-common_voice_en_23809074.wav",
+        "codec": "./audio/codec/common_voice_en_23809069-common_voice_en_23809074.wav"
+    },
+    "common_voice_en_19819944-common_voice_en_19819945": {
+        "cosyvoice_heal": "./audio/cosyvoice_heal/common_voice_en_19819944-common_voice_en_19819945.wav",
+        "cosyvoice_ref": "./audio/cosyvoice_ref/common_voice_en_19819944-common_voice_en_19819945.wav",
+        "gt": "./audio/gt/common_voice_en_19819944-common_voice_en_19819945.wav",
+        "llasa_heal": "./audio/llasa_heal/common_voice_en_19819944-common_voice_en_19819945.wav",
+        "llasa_ref": "./audio/llasa_ref/common_voice_en_19819944-common_voice_en_19819945.wav",
+        "vocoder": "./audio/vocoder/common_voice_en_19819944-common_voice_en_19819945.wav",
+        "codec": "./audio/codec/common_voice_en_19819944-common_voice_en_19819945.wav"
+    },
+    "7127_75947_000055_000005": {
+        "cosyvoice_heal": "./audio/cosyvoice_heal/7127_75947_000055_000005.wav",
+        "cosyvoice_ref": "./audio/cosyvoice_ref/7127_75947_000055_000005.wav",
+        "gt": "./audio/gt/7127_75947_000055_000005.wav",
+        "llasa_heal": "./audio/llasa_heal/7127_75947_000055_000005.wav",
+        "llasa_ref": "./audio/llasa_ref/7127_75947_000055_000005.wav",
+        "vocoder": "./audio/vocoder/7127_75947_000055_000005.wav"
+    },
+    "common_voice_en_19816147-common_voice_en_19816145": {
+        "cosyvoice_heal": "./audio/cosyvoice_heal/common_voice_en_19816147-common_voice_en_19816145.wav",
+        "cosyvoice_ref": "./audio/cosyvoice_ref/common_voice_en_19816147-common_voice_en_19816145.wav",
+        "gt": "./audio/gt/common_voice_en_19816147-common_voice_en_19816145.wav",
+        "llasa_heal": "./audio/llasa_heal/common_voice_en_19816147-common_voice_en_19816145.wav",
+        "llasa_ref": "./audio/llasa_ref/common_voice_en_19816147-common_voice_en_19816145.wav",
+        "vocoder": "./audio/vocoder/common_voice_en_19816147-common_voice_en_19816145.wav",
+        "codec": "./audio/codec/common_voice_en_19816147-common_voice_en_19816145.wav"
+    },
+    "260_123288_000013_000001": {
+        "cosyvoice_heal": "./audio/cosyvoice_heal/260_123288_000013_000001.wav",
+        "cosyvoice_ref": "./audio/cosyvoice_ref/260_123288_000013_000001.wav",
+        "gt": "./audio/gt/260_123288_000013_000001.wav",
+        "llasa_heal": "./audio/llasa_heal/260_123288_000013_000001.wav",
+        "llasa_ref": "./audio/llasa_ref/260_123288_000013_000001.wav",
+        "vocoder": "./audio/vocoder/260_123288_000013_000001.wav"
+    },
+    "common_voice_en_21504874-common_voice_en_21504873": {
+        "cosyvoice_heal": "./audio/cosyvoice_heal/common_voice_en_21504874-common_voice_en_21504873.wav",
+        "cosyvoice_ref": "./audio/cosyvoice_ref/common_voice_en_21504874-common_voice_en_21504873.wav",
+        "gt": "./audio/gt/common_voice_en_21504874-common_voice_en_21504873.wav",
+        "llasa_heal": "./audio/llasa_heal/common_voice_en_21504874-common_voice_en_21504873.wav",
+        "llasa_ref": "./audio/llasa_ref/common_voice_en_21504874-common_voice_en_21504873.wav",
+        "vocoder": "./audio/vocoder/common_voice_en_21504874-common_voice_en_21504873.wav",
+        "codec": "./audio/codec/common_voice_en_21504874-common_voice_en_21504873.wav"
+    },
+    "7176_88083_000006_000003": {
+        "cosyvoice_heal": "./audio/cosyvoice_heal/7176_88083_000006_000003.wav",
+        "cosyvoice_ref": "./audio/cosyvoice_ref/7176_88083_000006_000003.wav",
+        "gt": "./audio/gt/7176_88083_000006_000003.wav",
+        "llasa_heal": "./audio/llasa_heal/7176_88083_000006_000003.wav",
+        "llasa_ref": "./audio/llasa_ref/7176_88083_000006_000003.wav",
+        "vocoder": "./audio/vocoder/7176_88083_000006_000003.wav"
+    },
+    "4970_29095_000028_000002": {
+        "cosyvoice_heal": "./audio/cosyvoice_heal/4970_29095_000028_000002.wav",
+        "cosyvoice_ref": "./audio/cosyvoice_ref/4970_29095_000028_000002.wav",
+        "gt": "./audio/gt/4970_29095_000028_000002.wav",
+        "llasa_heal": "./audio/llasa_heal/4970_29095_000028_000002.wav",
+        "llasa_ref": "./audio/llasa_ref/4970_29095_000028_000002.wav",
+        "vocoder": "./audio/vocoder/4970_29095_000028_000002.wav"
+    },
+    "4970_29095_000017_000000": {
+        "cosyvoice_heal": "./audio/cosyvoice_heal/4970_29095_000017_000000.wav",
+        "cosyvoice_ref": "./audio/cosyvoice_ref/4970_29095_000017_000000.wav",
+        "gt": "./audio/gt/4970_29095_000017_000000.wav",
+        "llasa_heal": "./audio/llasa_heal/4970_29095_000017_000000.wav",
+        "llasa_ref": "./audio/llasa_ref/4970_29095_000017_000000.wav",
+        "vocoder": "./audio/vocoder/4970_29095_000017_000000.wav"
+    },
+    "common_voice_en_21877403-common_voice_en_21877404": {
+        "cosyvoice_heal": "./audio/cosyvoice_heal/common_voice_en_21877403-common_voice_en_21877404.wav",
+        "cosyvoice_ref": "./audio/cosyvoice_ref/common_voice_en_21877403-common_voice_en_21877404.wav",
+        "gt": "./audio/gt/common_voice_en_21877403-common_voice_en_21877404.wav",
+        "llasa_heal": "./audio/llasa_heal/common_voice_en_21877403-common_voice_en_21877404.wav",
+        "llasa_ref": "./audio/llasa_ref/common_voice_en_21877403-common_voice_en_21877404.wav",
+        "vocoder": "./audio/vocoder/common_voice_en_21877403-common_voice_en_21877404.wav",
+        "codec": "./audio/codec/common_voice_en_21877403-common_voice_en_21877404.wav"
+    },
+    "common_voice_en_27573778-common_voice_en_27573779": {
+        "cosyvoice_heal": "./audio/cosyvoice_heal/common_voice_en_27573778-common_voice_en_27573779.wav",
+        "cosyvoice_ref": "./audio/cosyvoice_ref/common_voice_en_27573778-common_voice_en_27573779.wav",
+        "gt": "./audio/gt/common_voice_en_27573778-common_voice_en_27573779.wav",
+        "llasa_heal": "./audio/llasa_heal/common_voice_en_27573778-common_voice_en_27573779.wav",
+        "llasa_ref": "./audio/llasa_ref/common_voice_en_27573778-common_voice_en_27573779.wav",
+        "vocoder": "./audio/vocoder/common_voice_en_27573778-common_voice_en_27573779.wav",
+        "codec": "./audio/codec/common_voice_en_27573778-common_voice_en_27573779.wav"
+    },
+    "2300_131720_000044_000001": {
+        "cosyvoice_heal": "./audio/cosyvoice_heal/2300_131720_000044_000001.wav",
+        "cosyvoice_ref": "./audio/cosyvoice_ref/2300_131720_000044_000001.wav",
+        "gt": "./audio/gt/2300_131720_000044_000001.wav",
+        "llasa_heal": "./audio/llasa_heal/2300_131720_000044_000001.wav",
+        "llasa_ref": "./audio/llasa_ref/2300_131720_000044_000001.wav",
+        "vocoder": "./audio/vocoder/2300_131720_000044_000001.wav"
+    },
+    "common_voice_en_103675-common_voice_en_103676": {
+        "cosyvoice_heal": "./audio/cosyvoice_heal/common_voice_en_103675-common_voice_en_103676.wav",
+        "cosyvoice_ref": "./audio/cosyvoice_ref/common_voice_en_103675-common_voice_en_103676.wav",
+        "gt": "./audio/gt/common_voice_en_103675-common_voice_en_103676.wav",
+        "llasa_heal": "./audio/llasa_heal/common_voice_en_103675-common_voice_en_103676.wav",
+        "llasa_ref": "./audio/llasa_ref/common_voice_en_103675-common_voice_en_103676.wav",
+        "vocoder": "./audio/vocoder/common_voice_en_103675-common_voice_en_103676.wav",
+        "codec": "./audio/codec/common_voice_en_103675-common_voice_en_103676.wav"
+    },
+    "common_voice_en_603760-common_voice_en_603759": {
+        "cosyvoice_heal": "./audio/cosyvoice_heal/common_voice_en_603760-common_voice_en_603759.wav",
+        "cosyvoice_ref": "./audio/cosyvoice_ref/common_voice_en_603760-common_voice_en_603759.wav",
+        "gt": "./audio/gt/common_voice_en_603760-common_voice_en_603759.wav",
+        "llasa_heal": "./audio/llasa_heal/common_voice_en_603760-common_voice_en_603759.wav",
+        "llasa_ref": "./audio/llasa_ref/common_voice_en_603760-common_voice_en_603759.wav",
+        "vocoder": "./audio/vocoder/common_voice_en_603760-common_voice_en_603759.wav",
+        "codec": "./audio/codec/common_voice_en_603760-common_voice_en_603759.wav"
+    }
+}
